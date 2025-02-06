@@ -1,0 +1,124 @@
+/* --- Background & Reset --- */
+body {
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* --- Bingkai di Sekeliling Halaman --- */
+.bingkai {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 4px solid #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff;
+}
+
+/* --- Animasi Gambar Getar Pelan --- */
+@keyframes getar {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.gambar {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    animation: getar 0.5s infinite alternate;
+}
+
+.gambar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* --- Posisi Gambar --- */
+.posisi-atas-kiri { top: 20px; left: 20px; }
+.posisi-atas-kanan { top: 20px; right: 20px; }
+.posisi-bawah-kiri { bottom: 20px; left: 20px; }
+.posisi-bawah-kanan { bottom: 20px; right: 20px; }
+
+/* --- Animasi Garis Neon Berkedip --- */
+@keyframes neon {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+.neon {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: cyan;
+    box-shadow: 0 0 15px cyan;
+    animation: neon 1.5s infinite alternate;
+}
+
+.garis-kiri { left: 10px; }
+.garis-kanan { right: 10px; }
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.tengah-atas {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.tengah-tengah {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.gambar {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.teks-atas, .teks-bawah {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.teks-atas {
+    top: 0;
+}
+
+.teks-bawah {
+    bottom: 0;
+}
